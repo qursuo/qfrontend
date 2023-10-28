@@ -15,7 +15,7 @@ html,body{
 
 }
 ::selection{
-  background: #1a75ff;
+  background: #fff;
   color: #fff;
 }
 .wrapper{
