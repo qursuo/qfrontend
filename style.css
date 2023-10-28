@@ -21,7 +21,7 @@ html,body{
 .wrapper{
   overflow: hidden;
   max-width: 390px;
-  background: #fff;
+  background: #8EC5FC;
   padding: 30px;
   border-radius: 15px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
@@ -51,7 +51,7 @@ html,body{
 .slide-controls .slide{
   height: 100%;
   width: 100%;
-  color: #fff;
+  color: #000;
   font-size: 18px;
   font-weight: 500;
   text-align: center;
@@ -81,7 +81,7 @@ input[type="radio"]{
   left: 50%;
 }
 #signup:checked ~ label.signup{
-  color: #fff;
+  color: #000;
   cursor: default;
   user-select: none;
 }
