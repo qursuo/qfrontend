@@ -15,3 +15,7 @@ signupLink.onclick = () => {
   signupBtn.click();
   return false;
 };
+
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('Halaman dimuat sepenuhnya.');
+});
