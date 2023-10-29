@@ -1,63 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Login dan Register</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="title-text">
-        <div class="title login">Form Login</div>
-        <div class="title signup">Form Registrasi</div>
-      </div>
-      <div class="form-container">
-        <div class="slide-controls">
-          <input type="radio" name="slide" id="login" checked />
-          <input type="radio" name="slide" id="signup" />
-          <label for="login" class="slide login">Login</label>
-          <label for="signup" class="slide signup">Daftar</label>
-          <div class="slider-tab"></div>
-        </div>
-        <div class="form-inner">
-          <form action="#" class="login">
-            <pre></pre>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Login dan Register</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+</head>
+<body>
+<section class="hero is-primary is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+          <form action="" class="box">
             <div class="field">
-              <input type="text" placeholder="Masukan Email " required />
+              <label for="" class="label">Email</label>
+              <div class="control has-icons-left">
+                <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" required>
+                <span class="icon is-small is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+              </div>
             </div>
             <div class="field">
-              <input type="password" placeholder="Masukan Password" required />
-            </div>
-            <div class="pass-link"><a href="#">Lupa password</a></div>
-            <div class="field btn">
-              <div class="btn-layer"></div>
-              <input type="submit" value="Login" />
-            </div>
-            <div class="signup-link">Buat Akun Anda<a href="">Daftar sekarang</a></div>
-          </form>
-          <form action="#" class="signup">
-            <div class="field">
-              <input type="text" placeholder="Masukan Nama" required />
+              <label for="" class="label">Password</label>
+              <div class="control has-icons-left">
+                <input type="password" placeholder="*******" class="input" required>
+                <span class="icon is-small is-left">
+                  <i class="fa fa-lock"></i>
+                </span>
+              </div>
             </div>
             <div class="field">
-              <input type="text" placeholder="Masukan Email" required />
+              <label for="" class="checkbox">
+                <input type="checkbox">
+                Remember me
+              </label>
             </div>
             <div class="field">
-              <input type="password" placeholder="Masukan Password" required />
+              <button class="button is-success">
+                Login
+              </button>
             </div>
-            <div class="field">
-              <input type="password" placeholder="Ulangi password" required />
-            </div>
-            <div class="field btn">
-              <div class="btn-layer"></div>
-              <input type="submit" value="Daftar" />
-            </div>
-            <div class="signup-link">Punya akun<a href="">Login</a></div>
           </form>
         </div>
       </div>
     </div>
-    <script src="./script.js"></script>
-  </body>
+  </div>
+</section>
+<script src="./script.js"></script>
+</body>
 </html>
