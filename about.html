@@ -1,182 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <title>Manage Courses - Online Course</title>
-</head>
-<body>
-
-<!-- Navbar -->
-<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <title>Kelola Kursus - Kursus Online</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
         <a class="navbar-item" href="#">
-            <strong>Online Course</strong>
+          <strong>Kursus Online</strong>
         </a>
-    </div>
-    <div class="navbar-menu">
+      </div>
+      <div class="navbar-menu">
         <div class="navbar-end">
-            <a class="navbar-item" href="#">Courses</a>
-            <a class="navbar-item" href="#">My Courses</a>
-            <a class="navbar-item" href="#">Profile</a>
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button is-light" href="#">Log out</a>
-                </div>
+          <a class="navbar-item" href="#">Kursus</a>
+          <a class="navbar-item" href="#">Kursus Online</a>
+          <a class="navbar-item" href="#">Profile</a>
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-light" href="#">Log out</a>
             </div>
+          </div>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-<!-- Hero Section -->
-<!-- Main Content -->
-<section class="section">
-    <div class="container">
+    <!-- Hero Section -->
+    <!-- Main Content -->
+    <section class="section">
+      <div class="container">
         <div class="columns">
-            <div class="column">
-                <!-- Course Table -->
-                <h2 class="title">Course List</h2>
-                <table class="table is-fullwidth">
-                    <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Instructor</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Web Development</td>
-                        <td>John Doe</td>
-                        <td>
-                            <button class="button is-primary">Edit</button>
-                            <button class="button is-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Introduction to Programming</td>
-                        <td>Jane Smith</td>
-                        <td>
-                            <button class="button is-primary">Edit</button>
-                            <button class="button is-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Data Science Fundamentals</td>
-                        <td>Alan Johnson</td>
-                        <td>
-                            <button class="button is-primary">Edit</button>
-                            <button class="button is-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Mobile App Development</td>
-                        <td>Sara Williams</td>
-                        <td>
-                            <button class="button is-primary">Edit</button>
-                            <button class="button is-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Database Design and Management</td>
-                        <td>Michael Brown</td>
-                        <td>
-                            <button class="button is-primary">Edit</button>
-                            <button class="button is-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Software Testing Techniques</td>
-                        <td>Emily Davis</td>
-                        <td>
-                            <button class="button is-primary">Edit</button>
-                            <button class="button is-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Artificial Intelligence Basics</td>
-                        <td>Chris Wilson</td>
-                        <td>
-                            <button class="button is-primary">Edit</button>
-                            <button class="button is-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Network Security Essentials</td>
-                        <td>Megan Lee</td>
-                        <td>
-                            <button class="button is-primary">Edit</button>
-                            <button class="button is-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>Web Design Principles</td>
-                        <td>David Rodriguez</td>
-                        <td>
-                            <button class="button is-primary">Edit</button>
-                            <button class="button is-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>Machine Learning Fundamentals</td>
-                        <td>Emma White</td>
-                        <td>
-                            <button class="button is-primary">Edit</button>
-                            <button class="button is-danger">Delete</button>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+          <div class="column">
+            <!-- Course Table -->
+            <h2 class="title">Daftar Kursus</h2>
+            <table class="table is-fullwidth">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Judul Kursus</th>
+                  <th>Pengajar</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Web Development</td>
+                  <td>John Doe</td>
+                  <td>
+                    <button class="button is-primary">Edit</button>
+                    <button class="button is-danger">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Pengenalan Pemrograman</td>
+                  <td>Jane Smith</td>
+                  <td>
+                    <button class="button is-primary">Edit</button>
+                    <button class="button is-danger">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Dasar dasar ilmu data</td>
+                  <td>Alan Johnson</td>
+                  <td>
+                    <button class="button is-primary">Edit</button>
+                    <button class="button is-danger">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Pengembangan Aplikasi Seluler</td>
+                  <td>Sara Williams</td>
+                  <td>
+                    <button class="button is-primary">Edit</button>
+                    <button class="button is-danger">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Desain dan Manajemen Basis Data</td>
+                  <td>Michael Brown</td>
+                  <td>
+                    <button class="button is-primary">Edit</button>
+                    <button class="button is-danger">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Teknik Pengujian Perangkat Lunak</td>
+                  <td>Emily Davis</td>
+                  <td>
+                    <button class="button is-primary">Edit</button>
+                    <button class="button is-danger">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Dasar-dasar Kecerdasan Buatan</td>
+                  <td>Chris Wilson</td>
+                  <td>
+                    <button class="button is-primary">Edit</button>
+                    <button class="button is-danger">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Esensi Keamanan Jaringan</td>
+                  <td>Megan Lee</td>
+                  <td>
+                    <button class="button is-primary">Edit</button>
+                    <button class="button is-danger">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Prinsip Desain Web</td>
+                  <td>David Rodriguez</td>
+                  <td>
+                    <button class="button is-primary">Edit</button>
+                    <button class="button is-danger">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Dasar-dasar Pembelajaran Mesin</td>
+                  <td>Emma White</td>
+                  <td>
+                    <button class="button is-primary">Edit</button>
+                    <button class="button is-danger">Hapus</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Main Content -->
-<section class="section">
-    <div class="container">
+    <!-- Main Content -->
+    <section class="section">
+      <div class="container">
         <div class="columns">
-            <div class="column">
-                <!-- Course Table -->
-                <h2 class="title">Course List</h2>
-                <table class="table is-fullwidth">
-                    <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Instructor</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Web Development</td>
-                        <td>John Doe</td>
-                        <td>
-                            <button class="button is-primary">Edit</button>
-                            <button class="button is-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <!-- Add more rows as needed -->
-                    </tbody>
-                </table>
-            </div>
+          <div class="column">
+            <!-- Course Table -->
+            <h2 class="title">Daftar Kursus</h2>
+            <table class="table is-fullwidth">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Judul</th>
+                  <th>Pengajar</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Web Development</td>
+                  <td>John Doe</td>
+                  <td>
+                    <button class="button is-primary">Edit</button>
+                    <button class="button is-danger">Hapus</button>
+                  </td>
+                </tr>
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+          </div>
         </div>
-    </div>
-</section>
-
-</body>
+      </div>
+    </section>
+  </body>
 </html>
