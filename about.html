@@ -2,152 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <title>Frontend CRUD with Bulma</title>
-    <style>
-        body {
-            padding: 20px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <title>Manage Courses - Online Course</title>
 </head>
 <body>
 
+<!-- Navbar -->
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+            <strong>Online Course</strong>
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="navbar-end">
+            <a class="navbar-item" href="#">Courses</a>
+            <a class="navbar-item" href="#">My Courses</a>
+            <a class="navbar-item" href="#">Profile</a>
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-light" href="#">Log out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<!-- Main Content -->
 <section class="section">
     <div class="container">
-        <h1 class="title">Frontend CRUD with Bulma</h1>
-
-        <!-- Add Button -->
-        <button class="button is-primary" onclick="showModal('add')">Add Item</button>
-
-        <!-- Table -->
-        <table class="table is-fullwidth">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Actions</th>
-            </tr>
-            </thead>
-            <tbody id="table-body">
-            <!-- Table rows will be added dynamically here -->
-            </tbody>
-        </table>
-
-        <!-- Modal for Add and Edit -->
-        <div class="modal" id="crud-modal">
-            <div class="modal-background" onclick="closeModal()"></div>
-            <div class="modal-card">
-                <header class="modal-card-head">
-                    <p class="modal-card-title" id="modal-title">Add Item</p>
-                    <button class="delete" aria-label="close" onclick="closeModal()"></button>
-                </header>
-                <section class="modal-card-body">
-                    <!-- Form for Add and Edit will be dynamically inserted here -->
-                </section>
-                <footer class="modal-card-foot">
-                    <button class="button is-success" onclick="saveData()">Save changes</button>
-                    <button class="button" onclick="closeModal()">Cancel</button>
-                </footer>
+        <div class="columns">
+            <div class="column">
+                <!-- Course Table -->
+                <h2 class="title">Course List</h2>
+                <table class="table is-fullwidth">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Instructor</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Web Development</td>
+                        <td>John Doe</td>
+                        <td>
+                            <button class="button is-primary">Edit</button>
+                            <button class="button is-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Introduction to Programming</td>
+                        <td>Jane Smith</td>
+                        <td>
+                            <button class="button is-primary">Edit</button>
+                            <button class="button is-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Data Science Fundamentals</td>
+                        <td>Alan Johnson</td>
+                        <td>
+                            <button class="button is-primary">Edit</button>
+                            <button class="button is-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Mobile App Development</td>
+                        <td>Sara Williams</td>
+                        <td>
+                            <button class="button is-primary">Edit</button>
+                            <button class="button is-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Database Design and Management</td>
+                        <td>Michael Brown</td>
+                        <td>
+                            <button class="button is-primary">Edit</button>
+                            <button class="button is-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Software Testing Techniques</td>
+                        <td>Emily Davis</td>
+                        <td>
+                            <button class="button is-primary">Edit</button>
+                            <button class="button is-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Artificial Intelligence Basics</td>
+                        <td>Chris Wilson</td>
+                        <td>
+                            <button class="button is-primary">Edit</button>
+                            <button class="button is-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Network Security Essentials</td>
+                        <td>Megan Lee</td>
+                        <td>
+                            <button class="button is-primary">Edit</button>
+                            <button class="button is-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Web Design Principles</td>
+                        <td>David Rodriguez</td>
+                        <td>
+                            <button class="button is-primary">Edit</button>
+                            <button class="button is-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Machine Learning Fundamentals</td>
+                        <td>Emma White</td>
+                        <td>
+                            <button class="button is-primary">Edit</button>
+                            <button class="button is-danger">Delete</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </section>
 
-<script>
-    let data = []; // Dummy data, replace with your actual data
-
-    // Function to display data in the table
-    function displayData() {
-        const tableBody = document.getElementById('table-body');
-        tableBody.innerHTML = '';
-
-        data.forEach((item, index) => {
-            const row = `<tr>
-          <td>${index + 1}</td>
-          <td>${item.name}</td>
-          <td>
-            <button class="button is-warning is-small" onclick="showModal('edit', ${index})">Edit</button>
-            <button class="button is-danger is-small" onclick="deleteItem(${index})">Delete</button>
-          </td>
-        </tr>`;
-            tableBody.innerHTML += row;
-        });
-    }
-
-    // Function to show modal for Add or Edit
-    function showModal(mode, index) {
-        const modal = document.getElementById('crud-modal');
-        const modalTitle = document.getElementById('modal-title');
-        const modalBody = document.querySelector('.modal-card-body');
-
-        if (mode === 'add') {
-            modalTitle.textContent = 'Add Item';
-            // Add your input fields for adding an item
-            modalBody.innerHTML = `
-          <div class="field">
-            <label class="label">Name</label>
-            <div class="control">
-              <input class="input" type="text" id="item-name">
+<!-- Main Content -->
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <!-- Course Table -->
+                <h2 class="title">Course List</h2>
+                <table class="table is-fullwidth">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Instructor</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Web Development</td>
+                        <td>John Doe</td>
+                        <td>
+                            <button class="button is-primary">Edit</button>
+                            <button class="button is-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
             </div>
-          </div>`;
-        } else if (mode === 'edit') {
-            modalTitle.textContent = 'Edit Item';
-            // Add your input fields for editing an item
-            modalBody.innerHTML = `
-          <div class="field">
-            <label class="label">Name</label>
-            <div class="control">
-              <input class="input" type="text" id="item-name" value="${data[index].name}">
-            </div>
-          </div>`;
-        }
-
-        modal.classList.add('is-active');
-    }
-
-    // Function to close modal
-    function closeModal() {
-        const modal = document.getElementById('crud-modal');
-        modal.classList.remove('is-active');
-    }
-
-    // Function to save data (Add or Edit)
-    function saveData() {
-        const itemName = document.getElementById('item-name').value;
-
-        // Dummy validation, replace with your actual validation logic
-        if (!itemName) {
-            alert('Please enter a name.');
-            return;
-        }
-
-        const newItem = { name: itemName };
-
-        // Check if editing or adding
-        if (editingIndex !== null) {
-            data[editingIndex] = newItem;
-            editingIndex = null;
-        } else {
-            data.push(newItem);
-        }
-
-        displayData();
-        closeModal();
-    }
-
-    // Function to delete an item
-    function deleteItem(index) {
-        const confirmDelete = confirm('Are you sure you want to delete this item?');
-        if (confirmDelete) {
-            data.splice(index, 1);
-            displayData();
-        }
-    }
-
-    // Initial display
-    displayData();
-</script>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>
