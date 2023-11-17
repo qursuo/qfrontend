@@ -2,131 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <title>Kursus Online</title>
-    <style>
-        /* Optional: Add your own custom styles here */
-        .course-card {
-            margin-bottom: 20px;
-            .circular-progress {
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                border: 3px solid #3273dc;
-                border-top: 3px solid transparent;
-                animation: spin 1s linear infinite;
-                margin: 20px auto;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <title>Course Details - Online Course</title>
 </head>
 <body>
 
-<section class="section">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="#">
-                <!-- Your logo or brand name here -->
-                Logo
-            </a>
-
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item" href="#">
-                    Home
-                </a>
-
-                <!-- Dropdown Item -->
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        My Course
-                    </a>
-
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item" href="course1.html">
-                            Course 1
-                        </a>
-                        <a class="navbar-item" href="course2.html">
-                            Course 2
-                        </a>
-                        <!-- Add more courses as needed -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="navbar-end">
-                <!-- Add additional navbar items as needed -->
-                <a class="navbar-item" href="#">
-                    About Us
-                </a>
-                <a class="navbar-item" href="#">
-                    Contact
-                </a>
-            </div>
-        </div>
-    </nav>
-    <div class="container">
-        <h1 class="title">Circular Progress Bar with Bulma</h1>
-        <div class="circular-progress"></div>
+<!-- Navbar -->
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+            <strong>Online Course</strong>
+        </a>
     </div>
-    <div class="container">
-        <h1 class="title">Selamat Datang di Kursus Online</h1>
-        <p class="subtitle">Temukan kursus yang sesuai untuk pengembangan diri Anda.</p>
-
-        <div class="columns">
-            <div class="column is-one-third">
-                <div class="card course-card">
-                    <div class="card-image">
-                        <figure class="image is-4by3">
-                            <img src="https://placekitten.com/800/600" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title is-4">Kursus Programming</p>
-                        <p class="subtitle is-6">Pelajari bahasa pemrograman terkini.</p>
-                        <a href="#" class="button is-primary">Daftar Sekarang</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column is-one-third">
-                <div class="card course-card">
-                    <div class="card-image">
-                        <figure class="image is-4by3">
-                            <img src="https://placekitten.com/800/601" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title is-4">Kursus Desain Grafis</p>
-                        <p class="subtitle is-6">Asah keterampilan desain grafis Anda.</p>
-                        <a href="#" class="button is-primary">Daftar Sekarang</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column is-one-third">
-                <div class="card course-card">
-                    <div class="card-image">
-                        <figure class="image is-4by3">
-                            <img src="https://placekitten.com/800/602" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <p class="title is-4">Kursus Pemasaran Online</p>
-                        <p class="subtitle is-6">Pelajari strategi pemasaran digital.</p>
-                        <a href="#" class="button is-primary">Daftar Sekarang</a>
-                    </div>
+    <div class="navbar-menu">
+        <div class="navbar-end">
+            <a class="navbar-item" href="#">Courses</a>
+            <a class="navbar-item" href="#">My Courses</a>
+            <a class="navbar-item" href="#">Profile</a>
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-light" href="#">Log out</a>
                 </div>
             </div>
         </div>
+    </div>
+</nav>
 
+<!-- Hero Section -->
+<section class="hero is-primary is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Course Details</h1>
+            <h2 class="subtitle">Learn and Excel in Web Development</h2>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-one-quarter">
+                <!-- Sidebar (you can customize this as needed) -->
+                <aside class="menu">
+                    <p class="menu-label">Course Sections</p>
+                    <ul class="menu-list">
+                        <li><a href="#">Section 1: Introduction</a></li>
+                        <li><a href="#">Section 2: HTML Basics</a></li>
+                        <li><a href="#">Section 3: CSS Styling</a></li>
+                        <!-- Add more sections as needed -->
+                    </ul>
+                </aside>
+            </div>
+            <div class="column">
+                <!-- Course Content (you can customize this as needed) -->
+                <h2 class="title">Section 1: Introduction</h2>
+                <div class="content">
+                    <p>Welcome to the introduction section of the course. In this section, you will learn the basics of web development and get familiar with the course content.</p>
+                    <!-- Add more content as needed -->
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
