@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Pilihan Ganda</title>
+    <!-- Memuat CSS Bulma dari CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        .question {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<section class="section">
+    <div class="container">
+        <h1 class="title">Soal Pilihan Ganda</h1>
+
+        <div class="question">
+            <p class="subtitle">Pertanyaan 1: Apa warna buah apel?</p>
+            <div class="field">
+                <label class="checkbox">
+                    <input type="checkbox" name="question1[]" value="merah"> Merah
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="question1[]" value="hijau"> Hijau
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="question1[]" value="kuning"> Kuning
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="subtitle">Pertanyaan 2: Apa bentuk bulan?</p>
+            <div class="field">
+                <label class="checkbox">
+                    <input type="checkbox" name="question2[]" value="bulat"> Bulat
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="question2[]" value="persegi"> Persegi
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="question2[]" value="segitiga"> Segitiga
+                </label>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="control">
+                <button class="button is-primary" onclick="tampilkanJawaban()">Submit</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function tampilkanJawaban() {
+        var jawaban1 = getJawaban('question1[]');
+        var jawaban2 = getJawaban('question2[]');
+
+        var hasilJawaban = "Jawaban Pertanyaan 1: " + jawaban1.join(', ') + "\nJawaban Pertanyaan 2: " + jawaban2.join(', ');
+
+        alert(hasilJawaban);
+    }
+
+    function getJawaban(name) {
+        var checkboxes = document.getElementsByName(name);
+        var jawaban = [];
+
+        checkboxes.forEach(function (checkbox) {
+            if (checkbox.checked) {
+                jawaban.push(checkbox.value);
+            }
+        });
+
+        return jawaban;
+    }
+</script>
+
+</body>
+</html>
