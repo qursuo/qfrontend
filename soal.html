@@ -30,40 +30,60 @@
     <div class="container">
         <h1 class="title has-text-centered">Soal Pilihan Ganda</h1>
 
-        <div class="box">
-            <div class="question">
-                <p class="subtitle">Pertanyaan 1: Apa warna buah apel?</p>
-                <div class="field">
-                    <label class="checkbox">
-                        <input type="checkbox" name="question1[]" value="merah"> Merah
-                    </label>
-                    <label class="checkbox">
-                        <input type="checkbox" name="question1[]" value="hijau"> Hijau
-                    </label>
-                    <label class="checkbox">
-                        <input type="checkbox" name="question1[]" value="kuning"> Kuning
-                    </label>
+        <div class="columns">
+            <div class="column is-two-thirds">
+                <div class="box">
+                    <div class="question">
+                        <p class="subtitle">Pertanyaan 1: Apa warna buah apel?</p>
+                        <div class="field">
+                            <label class="checkbox">
+                                <input type="checkbox" name="question1[]" value="merah"> Merah
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="question1[]" value="hijau"> Hijau
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="question1[]" value="kuning"> Kuning
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p class="subtitle">Pertanyaan 2: Apa bentuk bulan?</p>
+                        <div class="field">
+                            <label class="checkbox">
+                                <input type="checkbox" name="question2[]" value="bulat"> Bulat
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="question2[]" value="persegi"> Persegi
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="question2[]" value="segitiga"> Segitiga
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field has-text-centered">
+                        <div class="control">
+                            <button class="button is-primary" onclick="tampilkanJawaban()">Submit</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="question">
-                <p class="subtitle">Pertanyaan 2: Apa bentuk bulan?</p>
-                <div class="field">
-                    <label class="checkbox">
-                        <input type="checkbox" name="question2[]" value="bulat"> Bulat
-                    </label>
-                    <label class="checkbox">
-                        <input type="checkbox" name="question2[]" value="persegi"> Persegi
-                    </label>
-                    <label class="checkbox">
-                        <input type="checkbox" name="question2[]" value="segitiga"> Segitiga
-                    </label>
-                </div>
-            </div>
-
-            <div class="field has-text-centered">
-                <div class="control">
-                    <button class="button is-primary" onclick="tampilkanJawaban()">Submit</button>
+            <!-- List Soal di Sebelah Kanan -->
+            <div class="column">
+                <div class="box">
+                    <aside class="menu">
+                        <p class="menu-label">
+                            List Soal
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>Pertanyaan 1</a></li>
+                            <li><a>Pertanyaan 2</a></li>
+                            <!-- Tambahkan pertanyaan lebih lanjut sesuai kebutuhan -->
+                        </ul>
+                    </aside>
                 </div>
             </div>
         </div>
