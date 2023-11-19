@@ -22,6 +22,44 @@
         .button {
             margin-top: 20px;
         }
+
+        /* Animasi Fade In */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Gaya visual untuk pertanyaan */
+        .question p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        /* Hover effect pada checkbox */
+        .checkbox label:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Animasi pulsasi pada tombol Submit */
+        .button.is-primary {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 <body>
@@ -32,7 +70,7 @@
 
         <div class="columns">
             <div class="column is-two-thirds">
-                <div class="box">
+                <div class="box" style="animation: fadeIn 1s;">
                     <div class="question">
                         <p class="subtitle">Pertanyaan 1: Apa warna buah apel?</p>
                         <div class="field">
@@ -73,7 +111,7 @@
 
             <!-- List Soal di Sebelah Kanan -->
             <div class="column">
-                <div class="box">
+                <div class="box" style="animation: fadeIn 1s;">
                     <aside class="menu">
                         <p class="menu-label">
                             List Soal
