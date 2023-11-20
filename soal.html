@@ -1,156 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Soal Pilihan Ganda</title>
     <!-- Memuat CSS Bulma dari CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
     <style>
-        body {
-            background-color: #f5f5f5;
-        }
+      body {
+        background-color: #f5f5f5;
+      }
 
-        .container {
-            margin-top: 50px;
-        }
+      .container {
+        margin-top: 50px;
+      }
 
-        .question {
-            margin-bottom: 20px;
-        }
+      .question {
+        margin-bottom: 20px;
+      }
 
-        .button {
-            margin-top: 20px;
-        }
+      .button {
+        margin-top: 20px;
+      }
 
-        /* Animasi Fade In */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+      /* Animasi Fade In */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
         }
+        to {
+          opacity: 1;
+        }
+      }
 
-        /* Gaya visual untuk pertanyaan */
-        .question p {
-            font-size: 1.2em;
-            color: #333;
-        }
+      /* Gaya visual untuk pertanyaan */
+      .question p {
+        font-size: 1.2em;
+        color: #333;
+      }
 
-        /* Hover effect pada checkbox */
-        .checkbox label:hover {
-            background-color: #f0f0f0;
-        }
+      /* Hover effect pada checkbox */
+      .checkbox label:hover {
+        background-color: #f0f0f0;
+      }
 
-        /* Animasi pulsasi pada tombol Submit */
-        .button.is-primary {
-            animation: pulse 1.5s infinite;
-        }
+      /* Animasi pulsasi pada tombol Submit */
+      .button.is-primary {
+        animation: pulse 1.5s infinite;
+      }
 
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
         }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
     </style>
-</head>
-<body>
-
-<section class="section">
-    <div class="container">
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
         <h1 class="title has-text-centered">Soal Pilihan Ganda</h1>
 
         <div class="columns">
-            <div class="column is-two-thirds">
-                <div class="box" style="animation: fadeIn 1s;">
-                    <div class="question">
-                        <p class="subtitle">Pertanyaan 1: Apa warna buah apel?</p>
-                        <div class="field">
-                            <label class="checkbox">
-                                <input type="checkbox" name="question1[]" value="merah"> Merah
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" name="question1[]" value="hijau"> Hijau
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" name="question1[]" value="kuning"> ungu
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="question">
-                        <p class="subtitle">Pertanyaan 2: Apa bentuk bulan?</p>
-                        <div class="field">
-                            <label class="checkbox">
-                                <input type="checkbox" name="question2[]" value="bulat"> Bulat
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" name="question2[]" value="persegi"> Persegi
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" name="question2[]" value="segitiga"> Segitiga
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="field has-text-centered">
-                        <div class="control">
-                            <button class="button is-primary" onclick="tampilkanJawaban()">Submit</button>
-                        </div>
-                    </div>
+          <div class="column is-two-thirds">
+            <div class="box" style="animation: fadeIn 1s">
+              <div class="question">
+                <p class="subtitle">Pertanyaan 1: Apa Kepanjangan dari HTML?</p>
+                <div class="field">
+                  <label class="checkbox"> <input type="checkbox" name="question1[]" value="merah" /> Hypertext Markup Language </label>
+                  <label class="checkbox"> <input type="checkbox" name="question1[]" value="hijau" /> Hypertext Mark Language </label>
+                  <label class="checkbox"> <input type="checkbox" name="question1[]" value="kuning" /> Hyper Markup Language </label>
                 </div>
-            </div>
+              </div>
 
-            <!-- List Soal di Sebelah Kanan -->
-            <div class="column">
-                <div class="box" style="animation: fadeIn 1s;">
-                    <aside class="menu">
-                        <p class="menu-label">
-                            List Soal
-                        </p>
-                        <ul class="menu-list">
-                            <li><a>Pertanyaan 1</a></li>
-                            <li><a>Pertanyaan 2</a></li>
-                            <!-- Tambahkan pertanyaan lebih lanjut sesuai kebutuhan -->
-                        </ul>
-                    </aside>
+              <div class="question">
+                <p class="subtitle">Pertanyaan 2: Apa bentuk bulan?</p>
+                <div class="field">
+                  <label class="checkbox"> <input type="checkbox" name="question2[]" value="bulat" /> Bulat </label>
+                  <label class="checkbox"> <input type="checkbox" name="question2[]" value="persegi" /> Persegi </label>
+                  <label class="checkbox"> <input type="checkbox" name="question2[]" value="segitiga" /> Segitiga </label>
                 </div>
+              </div>
+
+              <div class="field has-text-centered">
+                <div class="control">
+                  <button class="button is-primary" onclick="tampilkanJawaban()">Submit</button>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <!-- List Soal di Sebelah Kanan -->
+          <div class="column">
+            <div class="box" style="animation: fadeIn 1s">
+              <aside class="menu">
+                <p class="menu-label">List Soal</p>
+                <ul class="menu-list">
+                  <li><a>Pertanyaan 1</a></li>
+                  <li><a>Pertanyaan 2</a></li>
+                  <!-- Tambahkan pertanyaan lebih lanjut sesuai kebutuhan -->
+                </ul>
+              </aside>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<script>
-    function tampilkanJawaban() {
-        var jawaban1 = getJawaban('question1[]');
-        var jawaban2 = getJawaban('question2[]');
+    <script>
+      function tampilkanJawaban() {
+        var jawaban1 = getJawaban("question1[]");
+        var jawaban2 = getJawaban("question2[]");
 
-        var hasilJawaban = "Jawaban Pertanyaan 1: " + jawaban1.join(', ') + "\nJawaban Pertanyaan 2: " + jawaban2.join(', ');
+        var hasilJawaban = "Jawaban Pertanyaan 1: " + jawaban1.join(", ") + "\nJawaban Pertanyaan 2: " + jawaban2.join(", ");
 
         alert(hasilJawaban);
-    }
+      }
 
-    function getJawaban(name) {
+      function getJawaban(name) {
         var checkboxes = document.getElementsByName(name);
         var jawaban = [];
 
         checkboxes.forEach(function (checkbox) {
-            if (checkbox.checked) {
-                jawaban.push(checkbox.value);
-            }
+          if (checkbox.checked) {
+            jawaban.push(checkbox.value);
+          }
         });
 
         return jawaban;
-    }
-</script>
-
-</body>
+      }
+    </script>
+  </body>
 </html>
