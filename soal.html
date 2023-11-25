@@ -1,158 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Soal Pilihan Ganda</title>
-    <!-- Memuat CSS Bulma dari CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
-    <style>
-      body {
-        background-color: #f5f5f5;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Pilihan Ganda</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-3VjvqA9hxHh7lf70AkQWUp6FHaCtoMRUzP+RJSoB7FZoan4QXF5eFQbUDLidqpzz36tXc8vNkQ3ZQF1bO0GmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
 
-      .container {
-        margin-top: 50px;
-      }
+<!-- Hero Section -->
+<section class="hero is-primary is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Quiz Pilihan Ganda
+      </h1>
+      <h2 class="subtitle">
+        Jawablah 15 pertanyaan dengan memilih jawaban yang benar.
+      </h2>
+    </div>
+  </div>
+</section>
 
-      .question {
-        margin-bottom: 20px;
-      }
-
-      .button {
-        margin-top: 20px;
-      }
-
-      /* Animasi Fade In */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      /* Gaya visual untuk pertanyaan */
-      .question p {
-        font-size: 1.2em;
-        color: #333;
-      }
-
-      /* Hover effect pada checkbox */
-      .checkbox label:hover {
-        background-color: #f0f0f0;
-      }
-
-      /* Animasi pulsasi pada tombol Submit */
-      .button.is-primary {
-        animation: pulse 1.5s infinite;
-      }
-
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <section class="section">
-      <div class="container">
-        <h1 class="title has-text-centered">Soal Pilihan Ganda</h1>
-
-        <div class="columns">
-          <div class="column is-two-thirds">
-            <div class="box" style="animation: fadeIn 1s">
-              <div class="question">
-                <p class="subtitle">Pertanyaan 1: Apa Kepanjangan dari HTML?</p>
-                <div class="field">
-                  <label class="checkbox"> <input type="checkbox" name="question1[]" value="merah" /> Hypertext Markup Language </label>
-                  <label class="checkbox"> <input type="checkbox" name="question1[]" value="hijau" /> Hypertext Mark Language </label>
-                  <label class="checkbox"> <input type="checkbox" name="question1[]" value="kuning" /> Hyper Markup Language </label>
-                </div>
-              </div>
-
-              <div class="question">
-                <p class="subtitle">Pertanyaan 2:  Bagaimana cara membuat list tak berurutan (unordered list) di HTML?</p>
-                <div class="field">
-                  <label class="checkbox"> <input type="checkbox" name="question2[]" value="bulat" />Dengan elemen ul </label>
-                  <label class="checkbox"> <input type="checkbox" name="question2[]" value="persegi" />Dengan elemen ol </label>
-                  <label class="checkbox"> <input type="checkbox" name="question2[]" value="segitiga" />Dengan elemen list </label>
-                </div>
-              </div>
-
-              <div class="question">
-                <p class="subtitle">Pertanyaan 3:  Apa yang dilakukan atribut HTML href pada elemen?</p>
-                <div class="field">
-                  <label class="checkbox"> <input type="checkbox" name="question2[]" value="bulat" />  Menentukan teks yang akan ditampilkan sebagai tautan. </label>
-                  <label class="checkbox"> <input type="checkbox" name="question2[]" value="persegi" /> Menentukan URL atau lokasi halaman yang akan dihubungkan.</label>
-                  <label class="checkbox"> <input type="checkbox" name="question2[]" value="segitiga" /> Menentukan warna teks tautan. </label>
-                </div>
-              </div>
-
-              <div class="question">
-                <p class="subtitle">Pertanyaan 4:  Apa yang dilakukan elemen img dalam HTML?</p>
-                <div class="field">
-                  <label class="checkbox"> <input type="checkbox" name="question2[]" value="bulat" />  Menampilkan teks pada halaman web</label>
-                  <label class="checkbox"> <input type="checkbox" name="question2[]" value="persegi" /> Menambahkan video ke halaman web</label>
-                  <label class="checkbox"> <input type="checkbox" name="question2[]" value="segitiga" /> Menyematkan gambar ke halaman web </label>
-                </div>
-              </div>
-
-              <div class="field has-text-centered">
-                <div class="control">
-                  <button class="button is-primary" onclick="tampilkanJawaban()">Submit</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- List Soal di Sebelah Kanan -->
-          <div class="column">
-            <div class="box" style="animation: fadeIn 1s">
-              <aside class="menu">
-                <p class="menu-label">List Soal</p>
-                <ul class="menu-list">
-                  <li><a>Pertanyaan 1</a></li>
-                  <li><a>Pertanyaan 2</a></li>
-                  <!-- Tambahkan pertanyaan lebih lanjut sesuai kebutuhan -->
-                </ul>
-              </aside>
-            </div>
+<!-- Main Section -->
+<section class="section">
+  <div class="container">
+    <form>
+      <!-- Question 1 -->
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Pertanyaan 1
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <p>Pertanyaan: Apa warna langit?</p>
+            <label class="radio">
+              <input type="radio" name="question1" value="a">
+              A. Merah
+            </label>
+            <label class="radio">
+              <input type="radio" name="question1" value="b">
+              B. Biru
+            </label>
+            <label class="radio">
+              <input type="radio" name="question1" value="c">
+              C. Hijau
+            </label>
           </div>
         </div>
       </div>
-    </section>
 
-    <script>
-      function tampilkanJawaban() {
-        var jawaban1 = getJawaban("question1[]");
-        var jawaban2 = getJawaban("question2[]");
+      <!-- Question 2, 3, ..., 15 -->
+      <!-- Copy and modify the card block for each question -->
 
-        var hasilJawaban = "Jawaban Pertanyaan 1: " + jawaban1.join(", ") + "\nJawaban Pertanyaan 2: " + jawaban2.join(", ");
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Pertanyaan 2
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <p>Pertanyaan: ...</p>
+            <label class="radio">
+              <input type="radio" name="question2" value="a">
+              A. ...
+            </label>
+            <label class="radio">
+              <input type="radio" name="question2" value="b">
+              B. ...
+            </label>
+            <label class="radio">
+              <input type="radio" name="question2" value="c">
+              C. ...
+            </label>
+          </div>
+        </div>
+      </div>
 
-        alert(hasilJawaban);
-      }
+      <!-- Repeat the card block for each question -->
 
-      function getJawaban(name) {
-        var checkboxes = document.getElementsByName(name);
-        var jawaban = [];
+      <!-- Submit Button -->
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-primary" type="submit">
+            <span class="icon is-small"><i class="fas fa-check"></i></span>
+            <span>Selesai</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
 
-        checkboxes.forEach(function (checkbox) {
-          if (checkbox.checked) {
-            jawaban.push(checkbox.value);
-          }
-        });
-
-        return jawaban;
-      }
-    </script>
-  </body>
+</body>
 </html>
