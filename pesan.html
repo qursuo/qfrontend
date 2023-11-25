@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Komentar dan Ulasan</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-3VjvqA9hxHh7lf70AkQWUp6FHaCtoMRUzP+RJSoB7FZoan4QXF5eFQbUDLidqpzz36tXc8vNkQ3ZQF1bO0GmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -23,6 +24,7 @@
                 <div class="card">
                     <header class="card-header">
                         <p class="card-header-title">
+                            <span class="icon"><i class="fas fa-comment"></i></span>
                             Beri Komentar dan Ulasan
                         </p>
                     </header>
@@ -31,21 +33,26 @@
                             <form>
                                 <div class="field">
                                     <label class="label">Nama</label>
-                                    <div class="control">
+                                    <div class="control has-icons-left">
                                         <input class="input" type="text" placeholder="Masukkan nama Anda">
+                                        <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
                                     </div>
                                 </div>
 
                                 <div class="field">
                                     <label class="label">Ulasan</label>
-                                    <div class="control">
+                                    <div class="control has-icons-left">
                                         <textarea class="textarea" placeholder="Tulis ulasan Anda"></textarea>
+                                        <span class="icon is-small is-left"><i class="fas fa-pencil-alt"></i></span>
                                     </div>
                                 </div>
 
                                 <div class="field">
                                     <div class="control">
-                                        <button class="button is-primary">Kirim Ulasan</button>
+                                        <button class="button is-primary">
+                                            <span class="icon is-small"><i class="fas fa-paper-plane"></i></span>
+                                            <span>Kirim Ulasan</span>
+                                        </button>
                                     </div>
                                 </div>
                             </form>
