@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dasar Pemrograman</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <title>Detail Kursus - Qursuo</title>
   </head>
   <body>
-    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <!-- Navbar -->
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation" style="margin-bottom: 20px;">
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
           <strong>Kursus Online</strong>
@@ -27,36 +28,43 @@
       </div>
     </nav>
 
-    <div class="dropdown is-active" style="margin-top: 20px;">
-      <div class="dropdown-trigger">
-        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-          <span>Materi Dasar Pemrograman</span>
-          <span class="icon is-small">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </button>
-      </div>
-      <div class="dropdown-menu" id="dropdown-menu" role="menu">
-        <div class="dropdown-content">
-          <a href="#" class="dropdown-item">
-            Variabel dan Tipe Data
-          </a>
-          <a class="dropdown-item">
-            Struktur Kontrol
-          </a>
-          <a href="#" class="dropdown-item is-active">
-            Fungsi dan Prosedur
-          </a>
-          <a href="#" class="dropdown-item">
-            Struktur Data Sederhana
-          </a>
-          <hr class="dropdown-divider">
-          <a href="#" class="dropdown-item">
-           Input dan Output
-          </a>
+    <!-- Hero Section -->
+    <section class="hero is-primary is-bold" style="margin-top: 20px;">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Detail Kursus Pemrograman</h1>
+          <h2 class="subtitle">Belajar dan Unggul dalam Pengembangan Website</h2>
         </div>
       </div>
-    </div>
+    </section>
 
+    <!-- Main Content -->
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-one-quarter">
+            <!-- Sidebar (you can customize this as needed) -->
+            <aside class="menu">
+              <p class="menu-label">Sesi Kursus</p>
+              <ul class="menu-list">
+                <li><a href="#">Sesi 1: Perkenalan</a></li>
+                <li><a href="#">Sesi 2: Basic HTML</a></li>
+                <li><a href="#">Sesi 3: Penataan CSS</a></li>
+                <li><a href="#">Sesi 4: Framework</a></li>
+                <li><a href="#">Sesi 5: Database</a></li>
+                <!-- Add more sections as needed -->
+              </ul>
+            </aside>
+          </div>
+          <div class="column">
+            <!-- Course Content (you can customize this as needed) -->
+            <h2 class="title">Sesi 1: Perkenalan</h2>
+            <div class="content">
+              <!-- Add more content as needed -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
