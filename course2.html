@@ -27,40 +27,35 @@
       </div>
     </nav>
 
-    <section class="section">
-      <div class="container">
-        <h2 class="title is-4">Pemrograman Berbasis Objek</h2>
-        <p>
-          Kursus pemrograman berbasis objek adalah program dan pelatihan yang dirancang untuk memberikan pemahaman dan keterampilan dalam pengembangan perangkat lunak menggunakan paradigma pemrograman berorientasi objek (OOP).
-        </p>
-        <style>
-          /* Optional: Add your own custom styles here */
-          .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive sizing */
-            height: 0;
-            overflow: hidden;
-          }
-
-          .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-          }
-        </style>
-        <div class="container">
-          <img src="img/pbo.png" alt="foto komputer" width="600" height="500" class="gambar-utama" />
+    <div class="dropdown is-active" style="margin-top: 20px;">
+      <div class="dropdown-trigger">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+          <span>Pemrograman Berorientasi Objek (OOP)</span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        <div class="dropdown-content">
+          <a href="#" class="dropdown-item">
+            Class dan Objek
+          </a>
+          <a class="dropdown-item">
+            Encapsulation
+          </a>
+          <a href="#" class="dropdown-item is-active">
+            Inheritance
+          </a>
+          <a href="#" class="dropdown-item">
+            Polymorphism
+          </a>
+          <hr class="dropdown-divider">
+          <a href="#" class="dropdown-item">
+            Abstraksi
+          </a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>&copy; 2023 Qursuo - Kursus online. Hak cipta dilindungi.</p>
-      </div>
-    </footer>
-  </body>
-  >>>>>>> 827214d13177eb03dd3df4611a42de7804ea18e1
-</html>
+  
